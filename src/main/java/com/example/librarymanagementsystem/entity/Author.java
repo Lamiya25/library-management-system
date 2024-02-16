@@ -1,4 +1,5 @@
-package com.example.librarymanagementsystem.model;
+package com.example.librarymanagementsystem.entity;
+
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -12,7 +13,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "roles")
+@Table(name = "authors")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -20,13 +21,10 @@ import java.util.Set;
 //@Where(clause = )
 @DynamicUpdate
 @DynamicInsert
-public class Role {
-
+public class Author {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Enumerated(EnumType.STRING)
-  //  private RoleType name;
-    @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
-    private Set<User> users = new HashSet<>();
+    private String name;
+
 }

@@ -1,4 +1,3 @@
-
 spring:
   datasource:
     username: postgres
@@ -10,5 +9,3 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
-some:
-  config: Some Configuration Data
