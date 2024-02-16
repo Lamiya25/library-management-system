@@ -1,0 +1,14 @@
+
+spring:
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/library_management_system
+    password: 12345678
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+some:
+  config: Some Configuration Data
